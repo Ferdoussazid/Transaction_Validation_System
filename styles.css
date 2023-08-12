@@ -11,19 +11,31 @@ body {
 
 .login-container {
   background-color: #fff;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-  padding: 20px;
+  padding: 60px;
   text-align: center;
+  width: 300px;
 }
 
 h1 {
   margin-bottom: 20px;
 }
 
-label, input, select {
+label{
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+  font-size: 18px;
+}
+input {
   display: block;
   margin-bottom: 10px;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 14px;
 }
 
 button {
@@ -33,6 +45,8 @@ button {
   border-radius: 5px;
   padding: 10px 20px;
   cursor: pointer;
+  width: 100%;
+  font-size: 16px;
 }
 
 button:hover {
