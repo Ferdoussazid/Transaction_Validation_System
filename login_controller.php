@@ -6,11 +6,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $userType = $_POST["user-type"];
     
     // Sample validation (replace with actual database query)
-    if ($username == "admin" && $password == "admin" && $userType == "admin") {
-        header("Location: admin_dashboard.php");
-        exit;
-    } elseif ($username == "user" && $password == "user" && $userType == "user") {
-        header("Location: user_dashboard.php");
+    // if ($username == "admin" && $password == "admin" && $userType == "admin") {
+    //     header("Location: admin_dashboard.php");
+    //     exit;
+    // } 
+    if ($username == "User" && $password == "User" && $userType == "User") {
+        header("Location: userhomepage.php");
         exit;
     } else {
         $error_message = "Invalid username, password, or user type.";
