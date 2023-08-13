@@ -18,7 +18,7 @@
             <input type="date" id="date" name="date" required>
             
             <label for="amount">Amount:</label>
-            <input type="number" id="amount" name="amount" required>
+            <input type="text" id="amount" name="amount" required>
             
             <label for="signature">Signature:</label>
             <input type="text" id="signature" name="signature" required>
