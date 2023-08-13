@@ -1,32 +1,14 @@
 <?php
-// Replace this with your database connection and validation logic
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = $_POST["username"];
-    $password = $_POST["password"];
-    $userType = $_POST["user-type"];
-    
-    // Sample validation (replace with actual database query)
-    // if ($username == "admin" && $password == "admin" && $userType == "admin") {
-    //     header("Location: admin_dashboard.php");
-    //     exit;
-    // } 
-    if ($username == "User" && $password == "User" && $userType == "User") {
-        header("Location: userhomepage.php");
-        exit;
-    } else {
-        $error_message = "Invalid username, password, or user type.";
-    }
-}
-?>
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Login Validation</title>
-</head>
-<body>
-    <?php if (isset($error_message)) { ?>
-        <p><?php echo $error_message; ?></p>
-    <?php } ?>
-</body>
-</html>
+    session_start();
+    $_SESSION['username'] = $_POST['username'];
+    $_SESSION['password'] = $_POST['password'];
+
+    $jsonCode = file_get_contents('json/login.json');
+    $loginCode = json_decode($jsonCode, true);
+
+    $phpFile = fopen('loginget.php', 'w');
+    fwrite($phpFile, $loginCode['LoginController']);
+    header('location: loginget.php');
+
+?>
