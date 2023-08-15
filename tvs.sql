@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Aug 13, 2023 at 09:43 AM
+-- Generation Time: Aug 15, 2023 at 06:00 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -31,21 +31,20 @@ CREATE TABLE `actors` (
   `ID` int(11) NOT NULL,
   `Username` varchar(500) NOT NULL,
   `Password` int(8) NOT NULL,
-  `Role` varchar(500) NOT NULL
+  `Role` varchar(500) NOT NULL,
+  `Amount` int(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `actors`
 --
 
-INSERT INTO `actors` (`ID`, `Username`, `Password`, `Role`) VALUES
-(1, 'Fahim', 1234, 'User'),
-(2, 'Shafwan', 1234, 'User'),
-(3, 'Sazid', 1234, 'Admin'),
-(4, 'Rian', 1234, 'Admin'),
-(5, 'Borshon', 1234, 'Admin'),
-(6, 'Tamal', 1234, 'Admin'),
-(7, 'Rahat', 1234, 'Admin');
+INSERT INTO `actors` (`ID`, `Username`, `Password`, `Role`, `Amount`) VALUES
+(1, 'Fahim', 1234, 'User', 1000),
+(2, 'Shafwan', 1234, 'User', 1500),
+(3, 'Sazid', 1234, 'Admin', NULL),
+(4, 'Rian', 1234, 'Admin', NULL),
+(6, 'Tamal', 1234, 'Admin', NULL);
 
 --
 -- Indexes for dumped tables
