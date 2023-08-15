@@ -33,7 +33,7 @@
     <h2 >Welcome <?php echo $username?><br><br>Your Available Balance is  <?php echo $balance ?> TK </h2>
     <div class="user-container">
         <h1>Transaction</h1>
-        <form id="transactionForm">
+        <form id="transactionForm" method="post" action="trans_controller.php">
             <label for="to">To:</label>
             <input type="text" id="to" name="to" required>
             
@@ -49,7 +49,7 @@
             <label for="signature">Signature:</label>
             <input type="text" id="signature" name="signature" required>
 
-            <input type="hidden" name="balance" value="<?php echo $balance; ?>">
+            <input type="hidden" id="balance" name="balance" value="<?php echo $balance; ?>">
 
 
             
