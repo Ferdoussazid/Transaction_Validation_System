@@ -3,7 +3,8 @@
     require_once('database.php');
 
     $row;
-    function login($username, $password){
+    function login($username, $password)
+    {
 
         global $row;
 
