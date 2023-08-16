@@ -29,7 +29,7 @@
         'Date' => date("d-m-Y"),
         'Amount' => $amount,
         'Signature' => $signature,
-        'Approval Votes' => 0
+        'Approved Votes' => 0
 
     );
 
