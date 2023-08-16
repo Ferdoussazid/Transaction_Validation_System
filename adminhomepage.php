@@ -11,7 +11,7 @@
 <table id="loginPanel" cellspacing="25">
         <tr align="center">
             <td colspan="6">
-                <font size="6", >Pending Transactions</font><br><br>
+                <font size="6" >Pending Transactions</font><br><br>
             </td>
         </tr>
         <tr>
@@ -71,7 +71,10 @@ else{
 
 ?>
         
-</table>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</table>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
 <table id="loginPanel" cellspacing="50">
         <tr>
             <td colspan="5">
@@ -85,6 +88,8 @@ else{
             <th>Date</th>
             <th>Approved Votes</th>
         </tr>
+        <tr></tr>
+
         <?php
 
             $id = $_COOKIE['id'];
@@ -96,14 +101,13 @@ else{
 
             if($arrayData == null) {
 
-                ?> <tr><td colspan="6">No valid transactions available</td></tr><?php
+        ?>        <tr><td colspan="5">No valid transactions available</td></tr>
+        <?php
 
             }
             
 
-        ?>
-        
-        
+        ?>    
 </table>
 </body>
 </html>
