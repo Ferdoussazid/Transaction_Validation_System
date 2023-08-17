@@ -1,6 +1,6 @@
 <?php
 
-    $id = $_COOKIE['id'];
+    $userid = $_COOKIE['id'];
     $id1 = $_GET['id'];
     $currentData = file_get_contents('json/pending.json');
     $arrayData = json_decode($currentData, true);
@@ -13,9 +13,9 @@
 
             if($arrayData[$point]['Approved Votes']<2){
 
-            if($id == 3) $currentData2 = file_get_contents('json/sazid_validlist.json');
-            else if($id == 4) $currentData2 = file_get_contents('json/rian_validlist.json');
-            else if($id == 5) $currentData2 = file_get_contents('json/tamal_validlist.json');
+            if($userid == 3) $currentData2 = file_get_contents('json/sazid_validlist.json');
+            else if($userid == 4) $currentData2 = file_get_contents('json/rian_validlist.json');
+            else if($userid == 5) $currentData2 = file_get_contents('json/tamal_validlist.json');
                 
             $arrayData2 = json_decode($currentData2, true);
 
@@ -34,9 +34,9 @@
             $arrayData2 [] = $data2;
             $json2 = json_encode($arrayData2, JSON_PRETTY_PRINT);
 
-            if($id == 3) file_put_contents('json/sazid_validlist.json', $json2);
-            else if($id == 4) file_put_contents('json/rian_validlist.json', $json2);
-            else if($id == 5) file_put_contents('json/tamal_validlist.json', $json2);
+            if($userid == 3) file_put_contents('json/sazid_validlist.json', $json2);
+            else if($userid == 4) file_put_contents('json/rian_validlist.json', $json2);
+            else if($userid == 5) file_put_contents('json/tamal_validlist.json', $json2);
 
             if(file_put_contents('json/pending.json', $json)) header('location: adminhomepage.php');
         }
