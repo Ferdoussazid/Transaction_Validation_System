@@ -99,6 +99,7 @@ else{
                 ?> <tr><td colspan="6">No valid transactions available</td></tr><?php
 
             }
+            
             else {
                 foreach($arrayData as $row){
                     echo "<tr>";
@@ -111,7 +112,6 @@ else{
                     echo "</tr>";
                 } 
             };   
-            
 
         ?>
         
