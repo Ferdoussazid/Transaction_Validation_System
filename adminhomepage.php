@@ -11,7 +11,7 @@
 <table id="loginPanel" cellspacing="25">
         <tr align="center">
             <td colspan="6">
-                <font size="6" >Pending Transactions</font><br><br>
+                <font size="6", >Pending Transactions</font><br><br>
             </td>
         </tr>
         <tr>
@@ -25,14 +25,14 @@
         <tr></tr>
 <?php
 
-$id = $_COOKIE['id'];
+$userid = $_COOKIE['id'];
 
 $currentData = file_get_contents('json/pending.json');
 $arrayData = json_decode($currentData, true);
 
-if($id == 3) $currentData2 = file_get_contents('json/sazid_validlist.json');
-else if($id == 4) $currentData2 = file_get_contents('json/rian_validlist.json');
-else if($id == 5) $currentData2 = file_get_contents('json/tamal_validlist.json');
+if($userid == 3) $currentData2 = file_get_contents('json/sazid_validlist.json');
+else if($userid == 4) $currentData2 = file_get_contents('json/rian_validlist.json');
+else if($userid == 5) $currentData2 = file_get_contents('json/tamal_validlist.json');
 $arrayData2 = json_decode($currentData2, true);
 
 if($arrayData == null){
@@ -71,10 +71,7 @@ else{
 
 ?>
         
-</table>
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
+</table>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <table id="loginPanel" cellspacing="50">
         <tr>
             <td colspan="5">
@@ -88,26 +85,25 @@ else{
             <th>Date</th>
             <th>Approved Votes</th>
         </tr>
-        <tr></tr>
-
         <?php
 
-            $id = $_COOKIE['id'];
+            $userid = $_COOKIE['id'];
 
-            if($id == 3) $currentData = file_get_contents('json/sazid_validlist.json');
-            else if($id == 4) $currentData = file_get_contents('json/rian_validlist.json');
-            else if($id == 5) $currentData = file_get_contents('json/tamal_validlist.json');
+            if($userid == 3) $currentData = file_get_contents('json/sazid_validlist.json');
+            else if($userid == 4) $currentData = file_get_contents('json/rian_validlist.json');
+            else if($userid == 5) $currentData = file_get_contents('json/tamal_validlist.json');
             $arrayData = json_decode($currentData, true);
 
             if($arrayData == null) {
 
-        ?>        <tr><td colspan="5">No valid transactions available</td></tr>
-        <?php
+                ?> <tr><td colspan="6">No valid transactions available</td></tr><?php
 
             }
             
 
-        ?>    
+        ?>
+        
+        
 </table>
 </body>
 </html>
