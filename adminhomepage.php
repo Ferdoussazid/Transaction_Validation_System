@@ -99,6 +99,18 @@ else{
                 ?> <tr><td colspan="6">No valid transactions available</td></tr><?php
 
             }
+            else {
+                foreach($arrayData as $row){
+                    echo "<tr>";
+                    echo "<td>" . $row["From"] . "</td>";
+                    echo "<td>" . $row["To"] . "</td>";
+                    echo "<td>" . $row["Amount"] . "</td>"; 
+                    echo "<td>" . $row["Date"] . "</td>";   
+                    echo "<td>" . $row["Approved Votes"]. "</td>";  ?>
+                    <?php
+                    echo "</tr>";
+                } 
+            };   
             
 
         ?>
